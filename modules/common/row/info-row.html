@@ -1,0 +1,22 @@
+<tr>
+  <td>
+    <input type='checkbox' ng-model="row.checked" value="{{ row.id }}">
+  </td>
+
+  <td>
+    {{ row.id }}
+  </td>
+
+  <td>
+    <div class="btn-group">
+      <button class="btn btn-default" ng-click="show(row.id)">
+        Show </button>
+
+      <button class="btn btn-default" ng-click="delete(row.id)">
+        Delete </button>
+        
+      <a class="btn btn-default" ui-sref="userProfile({userID: row.id})">
+        Edit </a>
+    </div>
+  </td>
+</tr>
