@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.6] - 2017-10-23
+
+### Fixed
+- User profile page bug fixed when user directly hit /user/{:id} page.
+
+### Added
+- Docker support and updated README for instructions.
+
 ## [0.5.4] - 2017-10-23
 
 ### Refactored

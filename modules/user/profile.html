@@ -19,6 +19,9 @@
       <button ng-click="editUser()" class="btn btn-default" 
         ng-class="{hidden: editMode}">Edit</button>
 
+      <a class="btn btn-default" ui-sref="users()"
+        ng-class="{hidden: editMode}">Back</a>
+
       <button ng-click="save()" class="btn btn-default" 
         ng-class="{hidden: !editMode}">Save</button>
 
