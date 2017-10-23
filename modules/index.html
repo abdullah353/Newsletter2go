@@ -8,12 +8,44 @@
     <title>Newsletter2go fe-test</title>
 
     <!-- Styles -->
-    <link href="" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="public/css/app.css">
 
-	<!-- Scripts -->
-	<script src=""></script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header class="container-fluid">
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li>
+            <a ui-sref="users()">Home</a>
+          </li>
+          <li>
+            <a ui-sref="users()">Users</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper container-fluid" ng-controller="ModalController">
+      <div ui-view>
+        <section 
+          class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-4 col-lg-offset-4">
+
+          <h1 class="text-center row">Welcome</h1>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+          <div class="row">
+            <a class="btn btn-default" ui-sref="users()">View all users</a>
+          </div>
+
+        </section><!-- .col-xs-12.col-sm-10* -->
+      </div><!-- .ui-view -->
+    </div><!-- .wrapper.container-fluid -->
   </body>
+
+  <!-- Scripts -->
+  <!-- TODO (P4) Better to load lib from CDN -->
+  <script src="public/js/lib.js"></script>
+  <script src="public/js/core.js"></script>
 </html>
