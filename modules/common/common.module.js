@@ -1,5 +1,6 @@
 (function () {
 	'use strict';
 	
-	angular.module('common', []);
+	angular.module('common', ['ui.bootstrap']);
+
 }());
