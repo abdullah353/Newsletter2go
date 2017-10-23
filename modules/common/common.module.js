@@ -1,6 +1,10 @@
 (function () {
-	'use strict';
-	
-	angular.module('common', ['ui.bootstrap']);
+  'use strict';
+  
+  angular.module('common', [
+    'csv',
+    'modal',
+    'row'
+  ]);
 
 }());

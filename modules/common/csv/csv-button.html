@@ -1,3 +1,6 @@
 <a href='{{hreflink}}' download='{{filename}}' 
-  class='btn btn-default' ng-disabled='!enableButton'>
-    Download </a>
+  class='btn btn-default' ng-class='{hidden: !enableButton}'>
+    Download</a>
+
+<button  class='btn btn-default' 
+  ng-class='{hidden: enableButton}' disabled>Download</button>

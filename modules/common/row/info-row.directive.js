@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('common');
+  var app = angular.module('row');
 
   app.directive('infoRow', function() {
     return {

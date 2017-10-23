@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('common');
+  var app = angular.module('modal');
 
   app.controller('ConfirmController', ['$rootScope', '$scope', '$uibModalInstance',
     function($rootScope, $scope, $uibModalInstance) {

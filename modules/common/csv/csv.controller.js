@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('common');
+  var app = angular.module('csv');
 
   app.controller('CsvController', ['$scope', '$filter',
     function($scope, $filter) {

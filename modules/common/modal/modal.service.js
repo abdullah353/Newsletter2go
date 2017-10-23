@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  var app = angular.module('common');
+  var app = angular.module('modal');
 
-  app.service('ModalService', ['UserService', function(UserService) {
+  app.service('ModalService', [function() {
       var _this = this;
       var prefix = 'common/modal/';
 
@@ -13,7 +13,7 @@
       _this.getResolve = function(key, data) {
         return {
           'ShowUserModal': { user: function() {
-            return UserService.getById(data); }
+            return data; }
           },
           'ConfirmChange': {}
         }[key];

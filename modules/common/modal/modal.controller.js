@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('common');
+  var app = angular.module('modal');
 
   app.controller('ModalController', ['$scope', '$uibModal', 'ModalService',
     function($scope, $uibModal, ModalService) {
@@ -17,7 +17,7 @@
 
       // TODO (refactor): Optimise Event Naming conventions, and 
       // structure of events.
-      $scope.$on('InfoRowController:ShowUserModal', function(evnt, data){
+      $scope.$on('TableController:ShowUserModal', function(evnt, data){
         showModalWindow(evnt, data);
       });
 

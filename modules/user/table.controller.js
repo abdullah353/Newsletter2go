@@ -13,6 +13,8 @@
       $scope.tableHeaders = ['Select', 'User Id', 'Actions'];
 
       $scope.pageChanged = function() {
+        if(!UserService.all()) { return; }
+
         $scope.tableRows = UserService.all().slice(
           ($scope.currentPage - 1) * $scope.perPage, 
           $scope.currentPage * $scope.perPage
@@ -28,6 +30,10 @@
       $scope.$on('InfoRowController:DeleteUser', function(evnt, id) {
         UserService.rmById(id);
       });
+      // 3. listening for show request.
+      $scope.$on('InfoRowController:ShowUser', function(evnt, id) {
+        $scope.$emit('TableController:ShowUserModal', UserService.getById(id));
+      });
 
       // Top Table actions.
       $scope.deleteMultiples = function() {
@@ -35,11 +41,13 @@
       };
 
       $scope.$watch('tableRows', function(){
-          $scope.selectedCount = $filter('checkedCount')(UserService.all());
-          $scope.$emit(
-            'TableController:UpdatedSelectedItems',
-             UserService.toArray()
-           );
+        if(!UserService.all()) { return; }
+
+        $scope.selectedCount = $filter('checkedCount')(UserService.all());
+        $scope.$emit(
+          'TableController:UpdatedSelectedItems',
+           UserService.toArray()
+         );
       }, true);
   }]);
 

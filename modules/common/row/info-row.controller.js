@@ -1,13 +1,13 @@
 (function () {
   'use strict';
 
-  var app = angular.module('common');
+  var app = angular.module('row');
 
   app.controller('InfoRowController', ['$scope',
     function($scope) {
 
       $scope.show = function(userId) {
-        $scope.$emit('InfoRowController:ShowUserModal', userId);
+        $scope.$emit('InfoRowController:ShowUser', userId);
       };
 
       $scope.delete = function(userId) {
