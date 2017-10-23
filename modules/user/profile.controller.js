@@ -15,11 +15,11 @@
 
       $scope.editMode = false;
       
-      $scope.editUser = function () {
+      $scope.editUser = function() {
         $scope.editMode = !$scope.editMode;
       };
       
-      $scope.cancel = function () {
+      $scope.cancel = function() {
         if ( $scope.firstName !== user.firstName 
           || $scope.lastName !== user.lastName) {
 
@@ -29,7 +29,7 @@
         }
       };
 
-      $scope.save = function () {
+      $scope.save = function() {
         user.firstName = $scope.firstName;
         user.lastName = $scope.lastName;
         $scope.editMode = false;

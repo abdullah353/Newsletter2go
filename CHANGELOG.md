@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.4] - 2017-10-23
+
+### Refactored
+- Separated each nested module into it's own module and listed there dependencies
+- Refactored and isolated UserServices from different modules
+
 ## [0.3.4] - 2017-10-23
 
 ### Fixed
@@ -33,6 +39,7 @@
 - Initialized app.
 
 
+[0.5.4]: https://github.com/mabdullah353/Newsletter2go/compare/v0.3.4...v0.5.4
 [0.3.4]: https://github.com/mabdullah353/Newsletter2go/compare/v0.3.2...v0.3.4
 [0.3.2]: https://github.com/mabdullah353/Newsletter2go/compare/v0.2.1...v0.3.2
 [0.2.1]: https://github.com/mabdullah353/Newsletter2go/compare/v0.0.0...v0.2.1

@@ -1,13 +1,5 @@
 <div class="col-lg-6 col-lg-offset-3">
-  <csv-button
-    filename="{{data.exportFilename}}"
-    label="{{data.displayLabel}}"
-    column-header="data.myHeaderData"
-    input-array="data.myInputArray">
-  </csv-button>
-
-  <button ng-click="download()" class="btn btn-default" 
-    ng-disabled="!selectedCount"> downloaddd </button>
+  <csv-button> Download </csv-button>
 
   <button ng-click="deleteMultiples()" class="btn btn-default" 
     ng-disabled="!selectedCount"> Delete </button>
