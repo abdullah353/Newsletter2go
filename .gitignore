@@ -5,6 +5,8 @@
 
 .DS_Store
 
+package-lock.json
+public
 # Logs
 logs
 *.log
