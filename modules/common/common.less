@@ -1,0 +1,58 @@
+@darkBrown: #564237;
+@brown: #DEB857;
+@lightBrown: #E2C2A9;
+@mediumBrown: #BA9578;
+
+@radius: 5px 5px 0 0;
+@padding: 15px;
+
+section {
+  background-color: @lightBrown;
+  box-shadow: 1px 1px 5px @brown;
+  border-radius: @radius;
+
+  p {
+    min-height: 140px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  h1 {
+    background-color: @darkBrown;
+    color: white;
+    margin-top: 0;
+    padding: @padding;
+    border-radius: @radius;
+  }
+}
+
+.table {
+  tr:nth-of-type(even) {
+    background-color: @mediumBrown;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: @lightBrown;
+  }
+}
+
+.btn {
+  background-color: @darkBrown;
+  color: white;
+  padding: @padding - 5px;
+
+  &:hover {
+    background-color: @brown;
+    color: white;
+  }
+}
+
+.navbar-default {
+    background-color: #564237;
+
+    .navbar-nav li a {
+      color: white;
+    }
+}
