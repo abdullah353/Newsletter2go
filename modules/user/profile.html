@@ -1,0 +1,28 @@
+<section class="user-profile col-lg-6 col-lg-offset-3">
+  <h1 class="row">User Profile:</h1>
+    <ul>
+      <li><label>User Id:</label> {{ id }} </li>
+      <li>
+        <label>First Name:</label>
+        <input type="text" ng-model="firstName" ng-readonly="!editMode">
+      </li>
+      <li>
+        <label>Last Name:</label>
+        <input type="text" ng-model="lastName" ng-readonly="!editMode">
+      </li>
+      <li><label>Email:</label> {{ email }} </li>
+      <li><label>Country:</label> {{ country }} </li>
+      <li><label>D.O.B:</label> {{ dateOfBirth }} </li>
+    </ul>
+    
+    <div>
+      <button ng-click="editUser()" class="btn btn-default" 
+        ng-class="{hidden: editMode}">Edit</button>
+
+      <button ng-click="save()" class="btn btn-default" 
+        ng-class="{hidden: !editMode}">Save</button>
+
+      <button ng-click="cancel()" class="btn btn-default" 
+        ng-class="{hidden: !editMode}">Cancel</button>
+    </div>
+</section>
