@@ -24,19 +24,22 @@
       $scope.pageChanged();
       // 2. listening for any update on pagination.
       $rootScope.$on('UserService:usersAvailable', $scope.pageChanged);
+      // 3. listening for any delete request on user.
+      $scope.$on('InfoRowController:DeleteUser', function(evnt, id) {
+        UserService.rmById(id);
+      });
 
       // Top Table actions.
-      $scope.deleteMultiples = function () {
+      $scope.deleteMultiples = function() {
         UserService.rmSelected();
-      };
-
-      $scope.download = function () {
-        var delimiter = ';';
-        $scope.hreflink = encodeURI(UserService.toCsv(delimiter));
       };
 
       $scope.$watch('tableRows', function(){
           $scope.selectedCount = $filter('checkedCount')(UserService.all());
+          $scope.$emit(
+            'TableController:UpdatedSelectedItems',
+             UserService.toArray()
+           );
       }, true);
   }]);
 
