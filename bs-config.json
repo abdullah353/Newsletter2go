@@ -1,0 +1,11 @@
+{
+  "server": {
+    "baseDir": "modules",
+    "files": ["./modules/**/*.{html,htm,css,js}"],
+    "routes": {
+      "/bower_components": "bower_components",
+      "/public": "public",
+      "/data": "data"
+    }
+  }
+}
