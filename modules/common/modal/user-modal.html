@@ -1,0 +1,11 @@
+<div class="modal-header">
+  <h3 class="modal-title">User Detail</h3>
+</div>
+
+<div class="modal-body">
+  {{firstName}} {{lastName}}, age:{{ dateOfBirth | ageFilter }}
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-default" type="button" ng-click="cancel()">Ok</button>
+</div>
